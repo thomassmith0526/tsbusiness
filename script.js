@@ -1,11 +1,24 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
+const employees =["Joe Blow", "John Smith","Bob Johnson"]
+console.log(employees)
+
 
 // Collect employee data
 const collectEmployees = function() {
-  // TODO: Get user input to create and return an array of employee objects
+  console.log()
+ // TODO: Get user input to create and return an array of employee objects
 }
+let employeesArray = [
+  {
+    firstName: "Joe",
+    lastName: "Blow",
+    salary: 45000
+  },
+  {firstName:
 
+  }
+]
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
