@@ -27,21 +27,24 @@ const employeesArray = [
 ]
 // console.log(employeesArray)
 // Display the average salary
+let salary = 0
 const displayAverageSalary = function(employeesArray) {
- //promt
+for(let i = 0; i< employeesArray.length; i++) {
+      salary += Number(employeesArray[i].salary);
+}
+console.log(employeesArray.length)
+console.log(salary/(employeesArray.length))
+console.log(`The avg salary of our employess is $${salary/employeesArray.length}`)
   // TODO: Calculate and display the average salary
 }
-const salary = [45000, 46000, 47000,]
-for(i =0; i> salary.length; i++) {
-  console.log(`${salary[i]}`)
-}
-
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  // TODO: Select and display a random employee
+  const getRandomEmployee = employeesArray[Math.floor(Math.random() * employeesArray.length)];
+  console.log(getRandomEmployee)
+  console.log(`are random winner is ${getRandomEmployee.firstName + getRandomEmployee.lastName}`)
+    // TODO: Select and display a random employee
 }
-
 /*
   ====================
   STARTER CODE
