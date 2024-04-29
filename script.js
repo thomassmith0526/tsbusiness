@@ -1,34 +1,25 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
-// Collect employee data
-const collectEmployees = function() {
-  console.log(employeesArray)
-  return employeesArray 
- // TODO: Get user input to create and return an array of employee objects
-}
+ 
+//  // TODO: Get user input to create and return an array of employee objects
 
-const employeesArray = [
-  {
-    firstName: "Joe",
-    lastName: "Blow",
-    salary: 45000
-  },
-  {
-  firstName: "John",
-  lastName: "Smith",
-  salary: 46000
-  },
-  {
-    firstName: "Bob",
-    lastName: "Johnson",
-    salary: 47000
-  }
-]
-// console.log(employeesArray)
+const collectEmployees = function() {
+ let employees = [];
+  let forward = true; 
+ while (forward) {
+  let firstName = prompt("enter your first name");
+  let lastName = prompt("enter your last name");
+  let salary = Number(prompt("enter your salary"));
+  employees.push({firstName:firstName, lastName:lastName, salary:salary});  //worked with Duffey, Micah, Sam
+  forward = confirm("click ok to continue or cancel to stop");
+ }
+  return employees;
+}
+ 
 // Display the average salary
 let salary = 0
-const displayAverageSalary = function(employeesArray) {
+const displayAverageSalary = function(employeesArray) {      // worked with Micah
 for(let i = 0; i< employeesArray.length; i++) {
       salary += Number(employeesArray[i].salary);
 }
@@ -42,7 +33,7 @@ console.log(`The avg salary of our employess is $${salary/employeesArray.length}
 const getRandomEmployee = function(employeesArray) {
   const getRandomEmployee = employeesArray[Math.floor(Math.random() * employeesArray.length)];
   console.log(getRandomEmployee)
-  console.log(`are random winner is ${getRandomEmployee.firstName + getRandomEmployee.lastName}`)
+  console.log(`our random winner is ${getRandomEmployee.firstName}  ${getRandomEmployee.lastName}`)
     // TODO: Select and display a random employee
 }
 /*
